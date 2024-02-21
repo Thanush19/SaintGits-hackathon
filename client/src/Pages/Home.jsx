@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';
+import { Link } from 'react-router-dom';
 
 
 function Home() {
@@ -43,7 +44,9 @@ function Home() {
       };
   return (
     <>
-     <div className='max-w-[1400px] h-[780px] w-full m-auto py-10 px-4 relative group'>
+    <div className='p-2 md:p-10 '>
+      <div className='bg-gray-100 rounded-2xl p-5 mb-5'>
+      <div className='max-w-[1400px] h-[780px] w-full m-auto py-10 px-4 relative group'>
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
         className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
@@ -68,43 +71,60 @@ function Home() {
         ))}
       </div>
     </div>
+
+      </div>
+    </div>
+     
     <body className='p-5 md:p-10 text-gray-800'>
         <section className='bg-gray-100 rounded-2xl p-5 mb-10'>
         <div className='mx-auto'>
         <div className='flex flex-wrap mt-5 justify-center'>
-            <div className='w-full lg:w-1/2 xl:w-1/3 py-5 lg:p-5'>
+            <div className='w-full lg:w-1/3 xl:w-1/4 py-5 lg:p-5'>
+                <div className='bg-white p-10 rounded-2xl shadow-lg '>
+                <div className=''>Lorem </div> <button className='px-8 py-3 rounded font-bold text-white bg-green-500 mt-4'><Link to='/facropplan'>More</Link></button>
+                </div>
+            </div>
+
+            <div className='w-full lg:w-1/3 xl:w-1/4 py-5 lg:p-5'>
+                <div className='bg-white p-10 rounded-2xl shadow-lg '>
+                <div className=''>Lorem </div> <button className='px-8 py-3 rounded font-bold text-white bg-green-500 mt-4'><Link to='/farecommendation'>More</Link></button>
+                </div>
+            </div>
+
+            <div className='w-full lg:w-1/3 xl:w-1/4 py-5 lg:p-5'>
                 <div className='bg-white p-10 rounded-2xl shadow-lg '>
                 <div className=''>Lorem </div> <button className='px-8 py-3 rounded font-bold text-white bg-green-500 mt-4'>More</button>
                 </div>
             </div>
 
-            <div className='w-full lg:w-1/2 xl:w-1/3 py-5 lg:p-5'>
+            <div className='w-full lg:w-1/3 xl:w-1/4 py-5 lg:p-5'>
+                <div className='bg-white p-10 rounded-2xl shadow-lg '>
+                <div className=''>Lorem </div> <button className='px-8 py-3 rounded font-bold text-white bg-green-500 mt-4'>More</button>
+                </div>
+            </div>
+            <div className='w-full lg:w-1/3 xl:w-1/4 py-5 lg:p-5'>
+                <div className='bg-white p-10 rounded-2xl shadow-lg '>
+                <div className=''>Lorem </div> <button className='px-8 py-3 rounded font-bold text-white bg-green-500 mt-4'>More</button>
+                </div>
+            </div>
+            <div className='w-full lg:w-1/3 xl:w-1/4 py-5 lg:p-5'>
                 <div className='bg-white p-10 rounded-2xl shadow-lg '>
                 <div className=''>Lorem </div> <button className='px-8 py-3 rounded font-bold text-white bg-green-500 mt-4'>More</button>
                 </div>
             </div>
 
-            <div className='w-full lg:w-1/2 xl:w-1/3 py-5 lg:p-5'>
+            <div className='w-full lg:w-1/3 xl:w-1/4 py-5 lg:p-5'>
                 <div className='bg-white p-10 rounded-2xl shadow-lg '>
                 <div className=''>Lorem </div> <button className='px-8 py-3 rounded font-bold text-white bg-green-500 mt-4'>More</button>
                 </div>
             </div>
 
-            <div className='w-full lg:w-1/2 xl:w-1/3 py-5 lg:p-5'>
+            <div className='w-full lg:w-1/3 xl:w-1/4 py-5 lg:p-5'>
                 <div className='bg-white p-10 rounded-2xl shadow-lg '>
                 <div className=''>Lorem </div> <button className='px-8 py-3 rounded font-bold text-white bg-green-500 mt-4'>More</button>
                 </div>
             </div>
-            <div className='w-full lg:w-1/2 xl:w-1/3 py-5 lg:p-5'>
-                <div className='bg-white p-10 rounded-2xl shadow-lg '>
-                <div className=''>Lorem </div> <button className='px-8 py-3 rounded font-bold text-white bg-green-500 mt-4'>More</button>
-                </div>
-            </div>
-            <div className='w-full lg:w-1/2 xl:w-1/3 py-5 lg:p-5'>
-                <div className='bg-white p-10 rounded-2xl shadow-lg '>
-                <div className=''>Lorem </div> <button className='px-8 py-3 rounded font-bold text-white bg-green-500 mt-4'>More</button>
-                </div>
-            </div>
+
         </div>
 
 

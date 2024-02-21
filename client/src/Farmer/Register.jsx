@@ -4,8 +4,8 @@ function Register() {
   return (
     <>
     <div className='w-full flex h-full'>
-      <div className='w-1/2 '> image-right-div</div>
-      <div className='w-1/2  '>
+      <div className='w-1/2 border'> image-right-div </div>
+      <div className='w-1/2 border '>
       <div className='p-3  max-w-lg mx-auto '>
      <h1 className='text-3xl text-center font-semibold my-7'></h1>
     <h1 className='text-3xl text-center font-semibold my-7'>Farmers</h1>
