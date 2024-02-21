@@ -1,6 +1,6 @@
 const { Pool } = require("pg");
 
-const connectionString = "";
+const connectionString = "postgresql://devaharishm:Rzd2Na0lxKeE@ep-lively-water-a1xepnzv.ap-southeast-1.aws.neon.tech/neondb?sslmode=require";
 
 const pool = new Pool({
   connectionString,

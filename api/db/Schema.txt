@@ -1,0 +1,5 @@
+admin - username, password
+customers -  aadhaar_number, phone_number, location
+farmers - aadhaar_number, phone_number, address
+traders - aadhaar_number, phone_number, location
+wholesale - aadhaar_number, phone_number, location
