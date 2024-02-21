@@ -1,0 +1,48 @@
+###
+POST http://localhost:3000/auth/admin/register
+Content-Type: application/json
+
+{
+    "username" : "User2",
+    "password" : "helloworld"
+}
+
+###
+POST http://localhost:3000/auth/customer/register
+Content-Type: application/json
+
+{
+    "aadhaar_number" : "954416983345",
+    "phone_number" : "9998887776",
+    "location" : "Chennai"
+}
+
+###
+POST http://localhost:3000/auth/trader/register
+Content-Type: application/json
+
+{
+    "aadhaar_number" : "954416983345",
+    "phone_number" : "9998887776",
+    "location" : "Chennai"
+}
+
+###
+POST http://localhost:3000/auth/wholesale/register
+Content-Type: application/json
+
+{
+    "aadhaar_number" : "954416983345",
+    "phone_number" : "9998887776",
+    "location" : "Chennai"
+}
+
+###
+POST http://localhost:3000/auth/farmer/register
+Content-Type: application/json
+
+{
+    "aadhaar_number" : "954416983345",
+    "phone_number" : "9998887776",
+    "address" : "Chennai"
+}
