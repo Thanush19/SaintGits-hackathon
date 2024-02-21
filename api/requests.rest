@@ -46,3 +46,48 @@ Content-Type: application/json
     "phone_number" : "9998887776",
     "address" : "Chennai"
 }
+
+###
+POST http://localhost:3000/auth/admin/login
+Content-Type: application/json
+
+{
+    "username" : "User2",
+    "password" : "helloworld"
+}
+
+###
+POST http://localhost:3000/auth/customer/login
+Content-Type: application/json
+
+{
+    "aadhaar_number" : "954416983345",
+    "phone_number" : "9998887776"
+}
+
+###
+POST http://localhost:3000/auth/trader/login
+Content-Type: application/json
+
+{
+    "aadhaar_number" : "954416983345",
+    "phone_number" : "9998887776"
+}
+
+###
+POST http://localhost:3000/auth/wholesale/login
+Content-Type: application/json
+
+{
+    "aadhaar_number" : "954416983345",
+    "phone_number" : "9998887776"
+}
+
+###
+POST http://localhost:3000/auth/farmer/login
+Content-Type: application/json
+
+{
+    "aadhaar_number" : "954416983345",
+    "phone_number" : "9998887776"
+}
