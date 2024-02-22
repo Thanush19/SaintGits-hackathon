@@ -3,8 +3,15 @@ import React from 'react'
 function Register() {
   return (
     <>
+    
     <div className='w-full flex h-full'>
-      <div className='w-1/2 border'> image-right-div </div>
+        <div className='w-1/2 border'>
+          <img
+            src='https://images.pexels.com/photos/18100007/pexels-photo-18100007/free-photo-of-farmer-with-oxes-on-field.jpeg'
+            alt='Registration Image'
+            className='w-full h-full object-cover'
+          />
+        </div>
       <div className='w-1/2 border '>
       <div className='p-3  max-w-lg mx-auto '>
      <h1 className='text-3xl text-center font-semibold my-7'></h1>

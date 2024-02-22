@@ -13,7 +13,7 @@ function Navbar() {
         <Link to='/'>
         <h1 className='font-bold text-white '> AgriTech</h1>
         </Link>
-        <p className='text-2xl uppercase text-white'>Goverment Of India</p>
+       
         <ul className='flex gap-4'>
         <Menu as="div" className="relative inline-block text-left">
       {({ open }) => (
