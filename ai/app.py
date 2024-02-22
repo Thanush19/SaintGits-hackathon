@@ -3,6 +3,11 @@ from models.crop_prediction import get_crop_recommendations
 
 app = Flask(__name__)
 
+@app.route('/',methods=['GET'])
+def home():
+    return 'Crop recommendation endpoints are working!'
+
+
 @app.route('/crop-recommendation', methods=['POST'])
 def predict():
     # Get user input from JSON request
