@@ -13,6 +13,7 @@ import AdminSignin from './Admin/AdminSignin';
 import TraderSignin from './Trader/TraderSignin';
 import Wholesalerssignin from './wholesalers/Wholesalerssignin'
 import CustomerSignin from './Customer/CustomerSignin'
+import CropPredictionChart from './Farmer/CropPredictionChart';
 
 
 
@@ -37,9 +38,7 @@ function App() {
           <Route path='/wholesalersignin' element={<Wholesalerssignin/>}/>
           <Route path='/customersignin' element={<CustomerSignin/>}/>
 
-          
-          
-
+          <Route path = '/chart' element = {<CropPredictionChart/>} />
           
         </Routes>
       </BrowserRouter>
