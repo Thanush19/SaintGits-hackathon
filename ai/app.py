@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from models.crop_prediction import get_crop_recommendations
 # pip freeze >requirements.txt
 # pip install gunicorn
+# start cmd: gunicorn run:app
 app = Flask(__name__)
 
 @app.route('/',methods=['GET'])
