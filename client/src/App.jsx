@@ -5,6 +5,8 @@ import Home from './Pages/Home';
 import Register from './Farmer/Register';
 import CropPlanning from './Farmer/CropPlanning';
 import Recommendation from './Farmer/Recommendation';
+import Timeline from './Farmer/Timeline';
+
 import AdminSignin from './Admin/AdminSignin';
 import TraderSignin from './Trader/TraderSignin';
 import Wholesalerssignin from './wholesalers/Wholesalerssignin'
@@ -23,6 +25,8 @@ function App() {
           <Route path='/faregister' element={<Register />} />
           <Route path='/facropplan' element={<CropPlanning/>}/>
           <Route path='/farecommendation'element={<Recommendation/>}/>
+          <Route path='/fatimeline' element={<Timeline/>}/>
+
           <Route path='/adminsignin' element={<AdminSignin />} />
           <Route path='/tradersignin' element={<TraderSignin/>}/>
           <Route path='/wholesalersignin' element={<Wholesalerssignin/>}/>
