@@ -3,6 +3,7 @@ import React from 'react'
 function Register() {
   return (
     <>
+    
     <div className='w-full flex h-full'>
       <div className='w-1/2 border'> image-right-div </div>
       <div className='w-1/2 border '>
