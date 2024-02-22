@@ -38,9 +38,9 @@ function Govupdate() {
      </div> 
 
      <div className='h-5 w-full  '>
-        <button className=' h-7 w-full  rounded-lg font-bold hover:bg-red-300 border uppercase'>goverment update
+        <button className=' h-7 w-full  rounded-lg font-bold hover:bg-red-300 border uppercase'><Link to='/fagov'>goverment updates</Link>
         </button>
-     </div> 
+     </div>
 
      <div className='h-5 w-full  '>
         <button className=' h-7 w-full  rounded-lg font-bold hover:bg-red-300 border uppercase'>waste managment
