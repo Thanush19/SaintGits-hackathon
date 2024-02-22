@@ -1,13 +1,10 @@
-from flask import Flask, request, jsonify
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 import pickle
-import json  # Adding the missing import
+import json
 
-app = Flask(__name__)
-
-# JSON data
+# Sample JSON data
 data = '''
 {
     "crops": [
@@ -122,43 +119,30 @@ model.fit(X, y)
 with open('crop_prediction_model.pkl', 'wb') as model_file:
     pickle.dump(model, model_file)
 
-@app.route('/predict', methods=['POST'])
-def predict():
-    # Get user input from JSON request
-    data = request.json
-    user_location = data['location'].capitalize()
-    user_season = data['season'].capitalize()
-    user_soil_texture = data['soil_texture'].capitalize()
+def get_crop_recommendations(location, season, soil_texture):
+    recommended_crops = []
 
-    # Function to provide recommendations
-    def get_crop_recommendations(location, season, soil_texture):
-        # Check if location exists in the dataset
-        if location in df['location'].unique():
-            # Preprocess user input
-            location_code = le.transform([location])[0]
-            season_code = le.transform([season])[0]
-            soil_texture_code = le.transform([soil_texture])[0]
+    # Check if location exists in the dataset
+    if location in df['location'].unique():
+        # Preprocess user input
+        location_code = le.transform([location])[0]
+        season_code = le.transform([season])[0]
+        soil_texture_code = le.transform([soil_texture])[0]
 
-            # Make prediction
-            prediction = model.predict([[location_code, season_code, soil_texture_code]])
+        # Make prediction
+        prediction = model.predict([[location_code, season_code, soil_texture_code]])
 
-            return prediction[0]
+        # Append the predicted crop to the recommended crops list
+        recommended_crops.append(prediction[0])
+    else:
+        # Filter DataFrame based on season and soil texture
+        filtered_df = df[(df['season'] == season) & (df['soil_texture'] == soil_texture)]
+
+        # If no matching crops found, return any available crop
+        if filtered_df.empty:
+            recommended_crops.append(df.iloc[0]['name'])  # Return the first crop in the DataFrame
         else:
-            # Filter DataFrame based on season and soil texture
-            filtered_df = df[(df['season'] == season) & (df['soil_texture'] == soil_texture)]
+            # Append all crops from the filtered DataFrame to the recommended crops list
+            recommended_crops.extend(filtered_df['name'].tolist())
 
-            # If no matching crops found, return any available crop
-            if filtered_df.empty:
-                return df.iloc[0]['name']  # Return the first crop in the DataFrame
-            else:
-                # Otherwise, return the name of the first crop from the filtered DataFrame
-                return filtered_df.iloc[0]['name']
-
-    # Get recommendations
-    recommended_crop = get_crop_recommendations(user_location, user_season, user_soil_texture)
-
-    response = {'recommended_crop': recommended_crop}
-    return jsonify(response)
-
-if __name__ == '__main__':
-    app.run(debug=True)
+    return recommended_crops
