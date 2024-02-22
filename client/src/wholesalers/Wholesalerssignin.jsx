@@ -8,10 +8,10 @@ function Wholesalerssignin() {
       <div className='w-1/2  '>
       <div className='p-3  max-w-lg mx-auto '>
      <h1 className='text-3xl text-center font-semibold my-7'></h1>
-    <h1 className='text-3xl text-center font-semibold my-7'>Wholesale</h1>
+    <h1 className='text-3xl text-center font-semibold my-7'>Wholesaler</h1>
     <form  className='flex flex-col gap-4 py-7'>
 
-    <input type="number" placeholder='Aadhar Number'
+    <input type="aadharNumber" placeholder='Aadhar Number'
       id='' className='bg-slate-100 p-3 rounded-lg' 
       />
 
@@ -19,7 +19,7 @@ function Wholesalerssignin() {
       id='' className='bg-slate-100 p-3 rounded-lg' 
       />
 
-      <input type="text" placeholder='Location'
+      <input type="location" placeholder='Location'
       id='' className='bg-slate-100 p-3 rounded-lg' 
       />
 

@@ -8,7 +8,7 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 function Navbar() {
   return (
     <>
-    <div className='bg-teal-700 '>
+    <div className='bg-blue-400 '>
     <div className='flex justify-between  items-center max-w-7xl mx-auto p-2'>
         <Link to='/'>
         <h1 className='font-bold text-white '> AgriTech</h1>
@@ -85,14 +85,7 @@ function Navbar() {
         </ul>
     </div>
    </div>
-   <div className='bg-teal-500'>
-      <div className='flex justify-end space-x-8 items-center text-white font-semibold max-w-8xl mx-auto p-2  '>
-
-        <Link className='hover:text-black'  to ='/'>Home</Link>
-        <button className=' text-white px-4 py-2 border hover:text-black border-white-300 text-sm font-semibold rounded-lg  bg-teal-500  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 '><Link to='/'>Register/SingIn</Link></button>
-
-      </div>
-   </div>
+  
 
 
     </>
