@@ -72,11 +72,39 @@ function Home() {
       </div>
     </div>
 
-      </div>
+      </div> 
     </div>
+
+    <div className='p-5 md:p-10'>
+    <div className='bg-gray-100 p-5 rounded-2xl '> 
+    <div className='mx-auto flex justify-evenly'>
+    <Link to='/faregister'>
+  <button className='px-8 py-3 rounded font-bold text-white bg-red-500 mt-4'>Farmer</button>
+    </Link>
+
+    <Link to='/tradersignin'>
+  <button className='px-8 py-3 rounded font-bold text-white bg-red-500 mt-4'>Trader</button>
+</Link>
+
+<Link to='/wholesalersignin'>
+  <button className='px-8 py-3 rounded font-bold text-white bg-red-500 mt-4'>Whole Salers</button>
+</Link>
+
+<Link to='/customersignin'>
+  <button className='px-8 py-3 rounded font-bold text-white bg-red-500 mt-4'>Customer</button>
+</Link>
+
+
+      
+    </div>
+    </div>
+
+    </div>
+
+    
      
     <body className='p-5 md:p-10 text-gray-800'>
-        <section className='bg-gray-100 rounded-2xl p-5 mb-10'>
+        <section className='bg-gray-100 rounded-2xl p-5 mb-5'>
         <div className='mx-auto'>
         <div className='flex flex-wrap mt-5 justify-center'>
             <div className='w-full lg:w-1/3 xl:w-1/4 py-5 lg:p-5'>
